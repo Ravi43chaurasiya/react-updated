@@ -3,6 +3,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
+import Container from "./components/Container";
 
 function App() {
   //   return <React.Fragment>    <h1>Healthy food</h1>
@@ -17,12 +18,17 @@ function App() {
   let foodItems=['dal','chawal','paneer','mushroom','juice'];
 return(
     <>
-    
+    <Container>
       <h1>Healthy food</h1>
       {/* {foodItems.length===0?<h3>i m still hungry</h3>:null} */}
       <ErrorMessage items={foodItems}></ErrorMessage>
       <FoodItems items={foodItems}></FoodItems>
-  
+      </Container>
+      <Container>
+        <p>
+          Above is the list of healthy food for your health and well being.
+        </p>
+      </Container>
     </>
   );
 }
