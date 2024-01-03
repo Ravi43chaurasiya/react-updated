@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FoodItems from "./components/FoodItems";
 import ErrorMessage from "./components/ErrorMessage";
 import Container from "./components/Container";
+import FoodInput from "./components/FoodInput";
 
 function App() {
   //   return <React.Fragment>    <h1>Healthy food</h1>
@@ -20,15 +21,15 @@ return(
     <>
     <Container>
       <h1>Healthy food</h1>
-      {/* {foodItems.length===0?<h3>i m still hungry</h3>:null} */}
       <ErrorMessage items={foodItems}></ErrorMessage>
+      <FoodInput></FoodInput>
       <FoodItems items={foodItems}></FoodItems>
       </Container>
-      <Container>
+      {/* <Container>
         <p>
           Above is the list of healthy food for your health and well being.
         </p>
-      </Container>
+      </Container> */}
     </>
   );
 }
